@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package praktikumpemograman2;
+
+import java.util.Scanner;
+
+
+
+/**
+ *
+ * @author Dina
+ */
+public class BubbleSort {
+    public static void main(String[] args) {
+        
+        int a = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Banyaknya data : ");
+        int banyak = input.nextInt();
+        int []abjad = new int[banyak];
+        
+        //input data
+        while (a < banyak){
+            System.out.print("huruf "+(a+1)+" = ");
+            abjad[a] = input.nextInt();
+            a++;
+        }
+        
+        //proses pertukaran data
+        for(a=0; a<banyak; a++)
+        {
+            for(int b = 0; b<banyak-1; b++)
+            {
+                if(abjad[b]<abjad[b+1])
+                {
+                  
+                    int temp = abjad[b];
+                    abjad[b] = abjad[b+1];
+                    abjad[b+1] = temp;
+                }
+                
+             
+          // output
+          for(a=0; a<banyak; a++)
+          {
+              System.out.println(abjad[a]);
+          }
+            }
+        }
+    }
+        
+        
+}
+
+
